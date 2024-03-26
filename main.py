@@ -1,17 +1,8 @@
 import fese
 
-videopath = "./files/vid.mkv"
-
-video = fese.FFprobeVideoContainer(videopath)
-
-subtitles = video.get_subtitles()
-
-print(subtitles[0].suffix)
-
-extract = []
-for subtitle in subtitles:
-    if subtitle.language == "en":
-        extract.append(subtitle)
+def extract_subs(file_path: str, language: str = 'en') -> list:
+    video = fese.FFprobeVideoContainer(file_path)
+    return video.copy_subtitles(filter(lambda sub: sub.language == language, video.get_subtitles()))
 
 
-print(video.copy_subtitles(extract))
+print(extract_subs('files/vid.mkv'))
