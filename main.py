@@ -72,7 +72,21 @@ class FileWatcher:
         return cls()
 
 
-if __name__ == "__main__":
+def main():
+    if Path(LOCKFILE).exists():
+        print("program is already running")
+        return -1
+    open(LOCKFILE, "w").close()
     watcher = FileWatcher.load()
     watcher.check_files()
     watcher.save()
+    Path(LOCKFILE).unlink()
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception:
+        Path(LOCKFILE).unlink()
+    except KeyboardInterrupt:
+        Path(LOCKFILE).unlink()
