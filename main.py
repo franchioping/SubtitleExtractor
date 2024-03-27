@@ -40,9 +40,13 @@ class FileWatcher:
             if file_hash in self.processed_video_hashes:
                 continue
 
+            print(f" [*] Processing {file}")
             sub_files = subs.extract_subs(str(file.absolute()))
             self.video_subtitles_map[file_hash] = [Path(x) for x in list(sub_files.values())]  # type: ignore
             self.processed_video_hashes.append(file_hash)
+            self.save()
+            print(f"     - Finished Extracting Subtitles")
+
 
         for file_hash in self.video_subtitles_map.keys():
             if file_hash not in hashes_seen:
