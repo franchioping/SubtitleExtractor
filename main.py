@@ -1,14 +1,24 @@
+from functools import partial
+
 import watchfiles
 from pathlib import Path
 import hashlib
 from typing import TypedDict
-
+import xxhash
 import subs
 import pickle
 import json
 
 from config import *
 
+
+def get_hash(file):
+    CHUNK_SIZE = 2 ** 32  # Or whatever you have memory to handle
+    with open(file, 'rb') as input_file:
+        x = xxhash.xxh3_64()
+        for chunk in iter(partial(input_file.read, CHUNK_SIZE), b''):
+            x.update(chunk)
+        return x.hexdigest()
 
 def sha256sum(filename):
     with open(filename, 'rb', buffering=0) as f:
@@ -31,7 +41,7 @@ class FileWatcher:
 
         hashes_seen = []
         for file in files:
-            file_hash = sha256sum(file)
+            file_hash = get_hash(file)
             hashes_seen.append(file_hash)
 
             if file_hash in self.processed_video_hashes:
