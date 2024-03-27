@@ -1,1 +1,1 @@
-Extracts subtitles your media when you run it.
+Extracts subtitles from your media when you run it.
