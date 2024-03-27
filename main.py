@@ -7,10 +7,7 @@ import subs
 import pickle
 import json
 
-VIDEO_FILE_EXTENSION = "mkv"
-MEDIA_PATH = Path("files")
-
-SAVEFILE = "filewatcher.pickle"
+from config import *
 
 
 def sha256sum(filename):
@@ -46,7 +43,6 @@ class FileWatcher:
             self.processed_video_hashes.append(file_hash)
             self.save()
             print(f"     - Finished Extracting Subtitles")
-
 
         for file_hash in self.video_subtitles_map.keys():
             if file_hash not in hashes_seen:
