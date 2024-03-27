@@ -44,6 +44,7 @@ class FileWatcher:
             seen.append(file)
 
             self.save()
+            print(f"     - Extracted Files: {sub_files.values()}")
             print(f"     - Finished Extracting Subtitles")
 
         for file in self.processed_video_last_updated_times.keys():
