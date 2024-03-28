@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c965509-4866-4f8e-aa0a-9b160e9e29f4" name="Changes" comment="requirements.txt">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="3c965509-4866-4f8e-aa0a-9b160e9e29f4" name="Changes" comment="Use lock file to make sure its only run once at a time">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +108,7 @@
       <workItem from="1711496059475" duration="7277000" />
       <workItem from="1711562732172" duration="2466000" />
       <workItem from="1711565625586" duration="163000" />
-      <workItem from="1711567869811" duration="381000" />
+      <workItem from="1711567869811" duration="5267000" />
     </task>
     <task id="LOCAL-00001" summary="big bang">
       <option name="closed" value="true" />
@@ -153,7 +150,55 @@
       <option name="project" value="LOCAL" />
       <updated>1711565708452</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add logging and saving after every extract">
+      <option name="closed" value="true" />
+      <created>1711568287263</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711568287263</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add config file">
+      <option name="closed" value="true" />
+      <created>1711568561456</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711568561456</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change hashing algo">
+      <option name="closed" value="true" />
+      <created>1711569479910</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711569479910</updated>
+    </task>
+    <task id="LOCAL-00009" summary="use last updated times instead of hashes">
+      <option name="closed" value="true" />
+      <created>1711570228416</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711570228416</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add even more logging">
+      <option name="closed" value="true" />
+      <created>1711572784534</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711572784534</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Use lock file to make sure its only run once at a time">
+      <option name="closed" value="true" />
+      <created>1711582443201</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711582443201</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,9 +210,15 @@
     <MESSAGE value="extract subs function" />
     <MESSAGE value="final" />
     <MESSAGE value="requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="requirements.txt" />
+    <MESSAGE value="add logging and saving after every extract" />
+    <MESSAGE value="add config file" />
+    <MESSAGE value="change hashing algo" />
+    <MESSAGE value="use last updated times instead of hashes" />
+    <MESSAGE value="Add even more logging" />
+    <MESSAGE value="Use lock file to make sure its only run once at a time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Use lock file to make sure its only run once at a time" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/subtitle_extractor$main.coverage" NAME="main Coverage Results" MODIFIED="1711568208560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/subtitle_extractor$main.coverage" NAME="main Coverage Results" MODIFIED="1711582307478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
